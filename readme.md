@@ -1,15 +1,12 @@
 # Azure Hybrid Benefit Dashboard
 
-This dashboard 
-
-
-
+This dashboard gives you a quick overview of your Windows Virtual Machine (VM) estate and VMs with SQL installed.  The important information that is quickly shows you is whether you have [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#overview) enabled both at a Windows and SQL level. 
 
 If you'd like to see what [Azure Resource Graph](https://learn.microsoft.com/azure/governance/resource-graph/overview) queries are used to create this dashboard. You can find the Windows queries [here](/windowsahub/readme.md) and the SQL queries are [here](sqlahub/readme.md).
 
 
 # How to Enable Azure Dashboard for Arc Windows/Linux
-This article will show you how to use the [.json](json) file to create a custom dashboard in the [Azure portal](https://learn.microsoft.com/azure/azure-portal/azure-portal-dashboards).
+This article will show you how to use the [AHUB.json](AHUB.json) file to create a custom dashboard in the [Azure portal](https://learn.microsoft.com/azure/azure-portal/azure-portal-dashboards).
 
 
 
