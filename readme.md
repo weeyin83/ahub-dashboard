@@ -1,6 +1,8 @@
 # Azure Hybrid Benefit Dashboard
 
-This dashboard gives you a quick overview of your Windows Virtual Machine (VM) estate and VMs with SQL installed.  The important information that is quickly shows you is whether you have [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#overview) enabled both at a Windows and SQL level. 
+This dashboard gives you a quick overview of your Windows Virtual Machine (VM) estate and VMs with SQL installed.  The important information that is quickly shows you is whether you have [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#overview) enabled both at a Windows and SQL level.
+
+![ahub-dashboard-example](./img/ahubdashboard.png)
 
 If you'd like to see what [Azure Resource Graph](https://learn.microsoft.com/azure/governance/resource-graph/overview) queries are used to create this dashboard. You can find the Windows queries [here](/windowsahub/readme.md) and the SQL queries are [here](sqlahub/readme.md).
 
