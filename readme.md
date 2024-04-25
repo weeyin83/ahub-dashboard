@@ -5,7 +5,7 @@ This dashboard
 
 
 
-If you'd like to see what [Azure Resource Graph](https://learn.microsoft.com/azure/governance/resource-graph/overview) queries are used to create this dashboard. You can find the Windows queries [here](/windowsahub/windowsahubqueries.md) and the SQL queries are [here](sqlahub/sqlahubqueries.md).
+If you'd like to see what [Azure Resource Graph](https://learn.microsoft.com/azure/governance/resource-graph/overview) queries are used to create this dashboard. You can find the Windows queries [here](/windowsahub/readme.md) and the SQL queries are [here](sqlahub/readme.md).
 
 
 # How to Enable Azure Dashboard for Arc Windows/Linux
