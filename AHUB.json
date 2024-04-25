@@ -1,0 +1,242 @@
+{
+  "properties": {
+    "lenses": {
+      "0": {
+        "order": 0,
+        "parts": {
+          "0": {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "colSpan": 6,
+              "rowSpan": 5
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "partTitle",
+                  "value": "Query 1",
+                  "isOptional": true
+                },
+                {
+                  "name": "chartType",
+                  "value": 2,
+                  "isOptional": true
+                },
+                {
+                  "name": "isShared",
+                  "isOptional": true
+                },
+                {
+                  "name": "formatResults",
+                  "isOptional": true
+                },
+                {
+                  "name": "queryScope",
+                  "value": {
+                    "scope": 0,
+                    "values": []
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "query",
+                  "value": "resources \r\n| where type =~ 'Microsoft.Compute/virtualMachines'\r\n| extend licenseType = tostring(properties.['licenseType'])\r\n| extend vmSize = tostring(properties.hardwareProfile['vmSize'])\r\n| extend AHUB = iff((licenseType in (\"Windows_Server\")), \"Yes\", \"No\")\r\n| project name, location, vmSize, AHUB\r\n| summarize Count=count() by AHUB",
+                  "isOptional": true
+                },
+                {
+                  "name": "queryId",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/ArgQueryChartTile",
+              "settings": {},
+              "partHeader": {
+                "title": "Windows Server AHUB Count",
+                "subtitle": "A count of what servers have AHUB enabled or not"
+              }
+            }
+          },
+          "1": {
+            "position": {
+              "x": 7,
+              "y": 0,
+              "colSpan": 6,
+              "rowSpan": 5
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "partTitle",
+                  "value": "Query 1",
+                  "isOptional": true
+                },
+                {
+                  "name": "chartType",
+                  "value": 2,
+                  "isOptional": true
+                },
+                {
+                  "name": "isShared",
+                  "isOptional": true
+                },
+                {
+                  "name": "formatResults",
+                  "isOptional": true
+                },
+                {
+                  "name": "queryScope",
+                  "value": {
+                    "scope": 0,
+                    "values": []
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "query",
+                  "value": "resources\r\n| where type =~ 'Microsoft.SqlVirtualMachine/SqlVirtualMachines'\r\n| extend license = properties.sqlServerLicenseType\r\n| extend Image = properties.sqlImageOffer\r\n| extend SQLSKU = properties.sqlImageSku\r\n| extend AHUB = iff((license in (\"AHUB\")), \"Yes\", \"No\")\r\n| project name, license, Image, SQLSKU, AHUB\r\n| summarize Count=count() by AHUB",
+                  "isOptional": true
+                },
+                {
+                  "name": "queryId",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/ArgQueryChartTile",
+              "settings": {},
+              "partHeader": {
+                "title": "SQL AHUB Count",
+                "subtitle": "A count of what servers have AHUB enabled or not for SQL"
+              }
+            }
+          },
+          "2": {
+            "position": {
+              "x": 0,
+              "y": 5,
+              "colSpan": 13,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "partTitle",
+                  "value": "Query 1",
+                  "isOptional": true
+                },
+                {
+                  "name": "query",
+                  "value": "resources \r\n| where type =~ 'Microsoft.Compute/virtualMachines'\r\n| extend licenseType = tostring(properties.['licenseType'])\r\n| extend vmSize = tostring(properties.hardwareProfile['vmSize'])\r\n| extend AHUB = iff((licenseType in (\"Windows_Server\")), \"Yes\", \"No\")\r\n| project name, location, vmSize, AHUB",
+                  "isOptional": true
+                },
+                {
+                  "name": "chartType",
+                  "isOptional": true
+                },
+                {
+                  "name": "isShared",
+                  "isOptional": true
+                },
+                {
+                  "name": "queryId",
+                  "value": "",
+                  "isOptional": true
+                },
+                {
+                  "name": "formatResults",
+                  "isOptional": true
+                },
+                {
+                  "name": "queryScope",
+                  "value": {
+                    "scope": 0,
+                    "values": []
+                  },
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/ArgQueryGridTile",
+              "settings": {},
+              "partHeader": {
+                "title": "Windows VM AHUB Information",
+                "subtitle": "List of Windows VMs with AHUB enabled or not displayed"
+              }
+            }
+          },
+          "3": {
+            "position": {
+              "x": 0,
+              "y": 9,
+              "colSpan": 13,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "partTitle",
+                  "value": "Query 1",
+                  "isOptional": true
+                },
+                {
+                  "name": "chartType",
+                  "isOptional": true
+                },
+                {
+                  "name": "isShared",
+                  "isOptional": true
+                },
+                {
+                  "name": "formatResults",
+                  "isOptional": true
+                },
+                {
+                  "name": "queryScope",
+                  "value": {
+                    "scope": 0,
+                    "values": []
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "query",
+                  "value": "resources\r\n| where type =~ 'Microsoft.SqlVirtualMachine/SqlVirtualMachines'\r\n| extend license = properties.sqlServerLicenseType\r\n| extend Image = properties.sqlImageOffer\r\n| extend SQLSKU = properties.sqlImageSku\r\n| project name, license, Image, SQLSKU",
+                  "isOptional": true
+                },
+                {
+                  "name": "queryId",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/ArgQueryGridTile",
+              "settings": {},
+              "partHeader": {
+                "title": "SQL VM AHUB information",
+                "subtitle": "List of SQL VMs with AHUB enabled or not displayed"
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model": {
+        "timeRange": {
+          "value": {
+            "relative": {
+              "duration": 24,
+              "timeUnit": 1
+            }
+          },
+          "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+        }
+      }
+    }
+  },
+  "name": "AHUB",
+  "type": "Microsoft.Portal/dashboards",
+  "location": "INSERT LOCATION",
+  "tags": {
+    "hidden-title": "AHUB"
+  },
+  "apiVersion": "2015-08-01-preview"
+}
